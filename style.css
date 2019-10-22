@@ -1,0 +1,316 @@
+html, body, section {
+    height: 100%;
+    overflow: hidden;
+}
+
+main .left {
+    float: left;
+    width: 50vh;
+    height: 60vh;
+}
+
+main .right {
+    float: left;
+    width: 60vh;
+    height: 60vh;
+    text-align: left;
+    margin-left: 10vh;
+}
+
+main .left h1 {
+    font-size: 5vh;
+    margin: 2vh 0;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    display: none;
+}
+
+main .left h2 {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2vh;
+    font-size: 3vh;
+    white-space: nowrap;
+    display: none;
+}
+
+main .left > figure {
+    margin: 0 auto;
+    width: 46vh;
+    height: 46vh;
+    background-image: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+footer .channel-wrapper {
+    overflow: hidden;
+    width: 120vh;
+}
+
+main {
+    height: calc(100% - 20vh);
+    padding: 10vh 0;
+    text-align: center;
+}
+
+@media (max-width: 950px) {
+    main .right {
+        display: none;
+    }
+
+    main .left h1 {
+        font-size: 4vh;
+        margin: 1vh 0;
+    }
+
+    main .left h2 {
+        margin-bottom: 1vh;
+    }
+
+    main .left > figure {
+        margin: 0 auto;
+        width: 40vh;
+        height: 40vh;
+    }
+
+    footer .channel-wrapper {
+        width: 80%;
+    }
+
+    main {
+        padding: 2vh 0;
+    }
+
+    main .left h1 {
+        display: block;
+    }
+
+    main .left h2 {
+        display: block;
+    }
+}
+
+@media (min-width: 951px) {
+    main .right {
+        width: 33vh;
+        margin-left: 5vh;
+
+    }
+
+    footer .channel-wrapper {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1100px) {
+    main .right {
+        width: 40vh;
+        margin-left: 7.5vh;
+
+    }
+
+    footer .channel-wrapper {
+        width: 100vh;
+    }
+}
+
+
+@media (min-width: 1300px) {
+    main .right {
+        width: 50vh;
+    }
+}
+
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-image: url(./background.jpg);
+    /*background-image: url(https://i.loli.net/2019/04/02/5ca316e2f0d03.jpg);*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: blur(4px);*/
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+main .main-wrapper {
+    display: inline-block;
+    max-width: 90%;
+}
+
+
+main .left .action {
+    width: 46vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 4.5vh 0;
+    margin: auto auto;
+}
+
+main .left .action > svg {
+    width: 5vh;
+    height: 5vh;
+    fill: rgba(255, 255, 255, 0.4);
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+main .left .action > svg:hover {
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+main .left .action > svg.hidden {
+    display: none;
+}
+
+
+main .right .tagName {
+    display: inline-block;
+    background-color: #2D72F0;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.8vh;
+    padding: 0.6vh;
+    border-radius: 5px;
+}
+
+main .right h1 {
+    font-size: 5vh;
+    margin: 2vh 0;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap
+}
+
+main .right h2 {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2vh;
+    font-size: 3vh;
+    white-space: nowrap
+}
+
+main .right .lyrics-wrapper {
+    height: 30vh;
+    overflow: hidden;
+    margin-bottom: 2vh;
+    color: rgba(255, 255, 255, 1);
+}
+
+main .right .lyrics-wrapper .lyrics {
+    position: relative;
+    top: -6vh;
+    font-size: 2vh;
+    line-height: 3vh;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: translateY(0);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+main .progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .progress .progressBar {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 90%;
+    height: 0.8vh;
+    border-radius: 3px;
+}
+
+main .progress .progressBar .currentBar {
+    background-color: rgba(255, 255, 255, 1);
+    width: 0%;
+    height: 0.8vh;
+    border-radius: 3px;
+}
+
+main .progress .duration {
+    width: 10%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    height: 20vh;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px -.25vh .25vh .25vh rgba(255, 255, 255, 0.2);
+    padding: 1.5vh 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer .icon {
+    width: 6vh;
+    height: 6vh;
+    fill: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+footer .icon:hover {
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+
+footer .channels {
+    display: flex;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+footer .channels .channel {
+    margin: 1vh 3vh;
+}
+
+footer .channel:first-child {
+    margin-left: 10px;
+}
+
+footer .channel:last-child {
+    margin-right: 10px;
+}
+
+footer .channels .channel:hover {
+    box-shadow: 0 0 .5vh .5vh rgba(255, 255, 255, 0.8);
+}
+
+footer .channels .channel.active {
+    box-shadow: 0 0 .5vh .5vh rgba(255, 255, 255, 0.8);
+}
+
+footer .channels h3 {
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .channels img {
+
+    width: 20vh;
+    height: 14vh;
+}
+
